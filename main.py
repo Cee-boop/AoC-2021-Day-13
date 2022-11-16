@@ -6,10 +6,8 @@ with open(file='data.txt') as file:
 max_y, max_x = float('-inf'), float('-inf')
 for coord in coords:
     x, y = map(int, coord.split(","))
-    if x > max_x:
-        max_x = x
-    if y > max_y:
-        max_y = y
+    max_x = max(x, max_x)
+    max_y = max(y, max_y)
 
 
 def display_grid():
